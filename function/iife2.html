@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <title>Prototype1</title>
+
+    <script src="jquery-2.1.3.js"></script>
+<script>
+var x = 42;
+console.log(x);
+var message = (function(x){
+	return function() {
+		console.log("x is "+x);
+	}
+})(x);
+message();
+
+x = 12;
+console.log(x);
+message();
+
+</script>
+
+</head>
+<body>
+
+
+</body>
+</html>

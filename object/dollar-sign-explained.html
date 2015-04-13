@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <title>Prototype1</title>
+
+
+</head>
+<body>
+
+<div id="content"></div>
+
+<script>
+function $(id) {
+	return new Jquery(id);
+}
+
+var Jquery = function(id) {
+	this.id = id;
+}
+Jquery.prototype.html = function(html) {
+	document.getElementById(this.id).innerHTML = html;
+	return this;
+}
+
+$("content").html("test");
+
+</script>
+
+</body>
+</html>

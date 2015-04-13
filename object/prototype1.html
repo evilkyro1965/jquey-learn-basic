@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <title>Prototype1</title>
+
+    <script src="jquery-2.1.3.js"></script>
+<script>
+function Monster( type ) {
+    this.type = type;
+}
+Monster.prototype.getType = function() {
+
+}
+
+function Zombie( name ) {
+    this.name = name;
+}
+Zombie.prototype = new Monster();
+
+Zombie.prototype.eatPeople = function() {
+    console.log( 'tastes like chicken' );
+}
+
+var smallZombie = new Zombie();
+smallZombie.eatPeople();
+
+</script>
+
+</head>
+<body>
+
+
+</body>
+</html>
